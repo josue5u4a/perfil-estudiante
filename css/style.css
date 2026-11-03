@@ -125,14 +125,22 @@ blockquote::after{content:"";position:absolute;right:-40px;bottom:-40px;width:14
 
 footer{border-top:6px solid;border-image:linear-gradient(90deg,var(--azul),var(--menta),var(--ambar)) 1}
 
+/* ===== Imágenes ===== */
+.fila{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center}
+.ilustracion{margin:0;max-width:460px;background:var(--panel);border:1px solid var(--linea);border-radius:16px;padding:10px;box-shadow:0 18px 30px -20px rgba(20,33,61,.5);transform:rotate(1.5deg)}
+.ilustracion.centrada{margin:0 auto 32px}
+.ilustracion svg{display:block;width:100%;height:auto;border-radius:10px}
+.ilustracion figcaption{font-size:.9rem;color:var(--suave);padding:10px 8px 4px;text-align:center}
+
 @media (prefers-reduced-motion:reduce){
   .codigo{animation:none}
   .item,.lista li,.chips span,.enlaces a,.boton{transition:none}
 }
 
 @media (max-width:780px){
-  .hero .wrap,.dos{grid-template-columns:1fr}
+  .hero .wrap,.dos,.fila{grid-template-columns:1fr}
   header.hero{padding:36px 0 44px}
   nav strong{flex-basis:100%}
   section{padding:42px 0}
+  .ilustracion{transform:none;margin:0 auto}
 }
